@@ -12,8 +12,4 @@ arr = []
 if start < end:
     for i in range(start,end+1):
         arr.append(i)
-elif start > end:
-    for i in range(start,end - 1,-1):
-        arr.append(i)
-
 print(arr)
