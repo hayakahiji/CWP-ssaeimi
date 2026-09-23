@@ -9,7 +9,11 @@ start = int(sys.argv[1])
 end = int(sys.argv[2])
 
 arr = []
-for i in range(start,end+1):
-    arr.append(i)
+if start < end:
+    for i in range(start,end+1):
+        arr.append(i)
+elif start > end:
+    for i in range(start,end - 1,-1):
+        arr.append(i)
 
 print(arr)
