@@ -2,13 +2,14 @@
 from checkmate import checkmate
 from sys import argv
 def main():
-    try:
-        with open(argv[1], "r") as file:
-            board = file.read()
+    for filename in argv[1:]:
+        try:
+            with open(filename, "r") as file:
+                board = file.read()
 
-        checkmate(board)
+            checkmate(board)
 
-    except (FileNotFoundError, IndexError):
-        return
+        except (FileNotFoundError, IndexError):
+            return
 if __name__ == "__main__":
     main()
